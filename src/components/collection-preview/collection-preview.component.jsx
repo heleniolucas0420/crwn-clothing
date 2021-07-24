@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 import CollectionItem from '../collection-item/collection-item.component';
 
@@ -8,9 +9,11 @@ import {
   PreviweContainer
 } from './collection-preview.styles'
 
-const CollectionPreview = ({ title, items }) => (
+const CollectionPreview = ({ history, match, title, items, routeName }) => (
   <CollectionPreviewContainer>
-    <TitleContainer>{ title.toUpperCase() }</TitleContainer>
+    <TitleContainer onClick={() => history.push(`${match.path}/${routeName}`)}>
+      { title.toUpperCase() }
+    </TitleContainer>
     <PreviweContainer>
       {
         items
@@ -23,4 +26,4 @@ const CollectionPreview = ({ title, items }) => (
   </CollectionPreviewContainer>
 );
 
-export default CollectionPreview;
+export default withRouter(CollectionPreview);
