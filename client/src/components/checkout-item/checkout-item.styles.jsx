@@ -8,20 +8,35 @@ export const CheckoutItemContainer = styled.div`
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
+
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 25% 24% 25% 18% 8%;
+  }
 `;
 
 export const ImageContainer = styled.div`
-  width: 23%;
+  width: 25%;
   padding-right: 15px;
 
   img {
     width: 100%;
     height: 100%;
   };
+
+  @media screen and (max-width: 800px) {
+    width: 90%;
+  }
 `;
 
 export const TextContainer = styled.span`
   width: 23%;
+
+  @media screen and (max-width: 800px) {
+    width: 22%;
+    text-align: center;
+  }
 `;
 
 export const QuantityContainer = styled(TextContainer)`

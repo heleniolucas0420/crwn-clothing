@@ -6,7 +6,7 @@ import CollectionItem from '../collection-item/collection-item.component';
 import { 
   CollectionPreviewContainer, 
   TitleContainer, 
-  PreviweContainer
+  PreviewContainer
 } from './collection-preview.styles'
 
 const CollectionPreview = ({ history, match, title, items, routeName }) => (
@@ -14,7 +14,7 @@ const CollectionPreview = ({ history, match, title, items, routeName }) => (
     <TitleContainer onClick={() => history.push(`${match.path}/${routeName}`)}>
       { title.toUpperCase() }
     </TitleContainer>
-    <PreviweContainer>
+    <PreviewContainer>
       {
         items
         .filter((item, index) => index < 4)
@@ -22,7 +22,7 @@ const CollectionPreview = ({ history, match, title, items, routeName }) => (
           <CollectionItem key={item.id} item={item} />
         ))
       }
-    </PreviweContainer>
+    </PreviewContainer>
   </CollectionPreviewContainer>
 );
 

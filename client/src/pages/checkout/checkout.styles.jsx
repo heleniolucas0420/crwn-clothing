@@ -6,11 +6,15 @@ export const CheckoutPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px auto 0;
+  margin: 50px auto;
 
   button {
     margin-left: auto;
     margin-top: 50px;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 90%;
   }
 `;
 
@@ -24,12 +28,30 @@ export const CheckoutHeaderContainer = styled.div`
 
 export const HeaderBlockContainer = styled.div`
   text-transform: capitalize;
-    width: 23%;
+  width: 23%;
+
+  &:last-child {
+    width: 8%;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 23.5%;
 
     &:last-child {
       width: 8%;
     }
+  }
 `;
+
+export const PriceHeaderBlockContainer = styled.div`
+  text-transform: capitalize;
+  width: 23%;
+
+  @media screen and (max-width: 800px) {
+    width: 18%
+  }
+`;
+
 
 export const TotalContainer = styled.div`
   margin-top: 30px;

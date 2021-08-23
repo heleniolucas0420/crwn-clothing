@@ -59,4 +59,11 @@ export const CustomButtonContainer = styled.button`
 
 
   ${getButtonStyles}
+
+  @media screen and (max-width: 800px) {
+    display: block;
+    opacity: 0.9;
+    min-width: unset;
+    padding: 0 30px;
+  }
 `;
